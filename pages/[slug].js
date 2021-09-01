@@ -1,12 +1,23 @@
 import Link from "next/link";
+import Hero from '../components/Hero'
+import Bloglist from '../components/Bloglist'
+import Stats from '../components/Stats'
+import Faq from '../components/Faq'
 
 export default function Post({ post }) {
   return (
     <div>
+        <Hero></Hero>
       <Link href="/">
         <a>Go Home</a>
       </Link>
       <h2>{post.Title}</h2>
+      <h3>{post.Content}</h3>
+
+
+
+
+
     </div>
   );
 }
