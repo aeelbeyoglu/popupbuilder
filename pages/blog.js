@@ -1,34 +1,21 @@
-import Link from "next/link";
-import Hero from '../components/Hero'
-import Bloglist from '../components/Bloglist'
-import Stats from '../components/Stats'
-import Faq from '../components/Faq'
-import Footerend from '../components/Footerend'
+import Link from 'next/link'
+import { getAllPosts } from '../lib/ghost';
+
+export async function getStaticProps() {
+  const posts = await getAllPosts();
+  return { props: { posts } };
+}
 
 export default function Home({ posts }) {
   return (
-    <div>
-        <Hero></Hero>
-      {/* loop over the posts and show them */}
-      {posts &&
-        posts.map((post) => (
-          <Link href={`/${post.Slug}`} key={post.id}>
-            <a>
-              <h2>{post.Title}</h2>
-          
-            </a>
+     <ul>
+      {posts.map((post) => (
+        <li key={post.uuid}>
+          <Link href={`/${post.slug}`}>
+            <a>{post.title}</a>
           </Link>
-        ))}
-    </div>
+        </li>
+      ))}
+    </ul>
   );
-}
-
-export async function getStaticProps() {
-  // get posts from our api
-  const res = await fetch("http://157.230.103.61:1337/posts/");
-  const posts = await res.json();
-
-  return {
-    props: { posts },
-  };
 }
