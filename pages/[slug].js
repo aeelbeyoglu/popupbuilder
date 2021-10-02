@@ -3,6 +3,7 @@ import ErrorPage from "next/error";
 import { getPostBySlug, getAllPosts } from "../lib/api";
 import Head from "next/head";
 import markdownToHtml from "../lib/markdownToHtml";
+import BlogContent from "../components/BlogContent";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -11,30 +12,9 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <div>
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <>
-          <article className="mb-32">
-            {post.title}
-            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-            {/* <Head>
-              <title>
-                {post.title} | Next.js Blog Example with
-              </title>
-              <meta property="og:image" content={post.ogImage.url} />
-            </Head>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-            />
-            <PostBody content={post.content} /> */}
-          </article>
-        </>
-      )}
+  <BlogContent post={post}> </BlogContent>
     </div>
+  
   );
 }
 
@@ -48,7 +28,8 @@ export async function getStaticProps({ params }) {
     "ogImage",
     "coverImage",
   ]);
-  const content = await markdownToHtml(post.content || "");
+  //const content = await markdownToHtml(post.content || "");
+  const content = post.content;
 
   return {
     props: {

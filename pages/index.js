@@ -9,6 +9,7 @@ import { getAllPosts } from "../lib/api";
 import Seo from "../components/Seo";
 
 export default function Home({ allPosts }) {
+  const language = "english";
   return (
     <div>
       <Seo title="Popup Builder" description="popupsmart"/>

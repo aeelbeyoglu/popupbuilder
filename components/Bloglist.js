@@ -1,3 +1,5 @@
+import Link from "next/Link"
+import Image from "next/image"
 export default function BlogList({ posts }) {
   return (
     <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -32,7 +34,8 @@ export default function BlogList({ posts }) {
                   <p className="text-sm font-medium text-indigo-600">
                     {post.category}
                   </p>
-                  <a href={post.slug} className="block mt-2">
+                  <Link href={post.slug}>
+                  <a className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">
                       {post.title}
                     </p>
@@ -40,15 +43,19 @@ export default function BlogList({ posts }) {
                       {post.excerpt}
                     </p>
                   </a>
+                  </Link >
                 </div>
                 <div className="mt-6 flex items-center">
                   <div className="flex-shrink-0">
                     <span className="sr-only">{post.author.name}</span>
-                    <img
-                      className="h-10 w-10 rounded-full"
+                    <div className="h-10 w-10 rounded-full">
+                    <Image                      
                       src={post.author.picture}
                       alt=""
+                      width="40px"
+                      height="40px"
                     />
+                    </div>
                   </div>
                   <div className="ml-3">
                     {/* <p className="text-sm font-medium text-gray-900">
