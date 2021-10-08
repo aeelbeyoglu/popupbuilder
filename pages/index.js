@@ -7,17 +7,23 @@ import Faq from "../components/Faq";
 import Footerend from "../components/Footerend";
 import { getAllPosts } from "../lib/api";
 import Seo from "../components/Seo";
+import Navbar from "../components/Navbar";
+import LogoTools from "../components/LogoTools";
+import InspirationalPopups from "../components/InspirationalPopups"
 
 export default function Home({ allPosts }) {
   const language = "english";
   return (
     <div>
-      <Seo title="Popup Builder" description="popupsmart"/>
-      <Hero></Hero>
+      <Seo title="Popup Builder" description="popupsmart" />
+      <Navbar />
+      <Hero />
+      <InspirationalPopups />
+      <LogoTools />
       <Bloglist posts={allPosts} />
-      <Faq></Faq>
-      <Stats></Stats>
-      <Footerend></Footerend>
+      <Faq />
+      <Stats />
+      <Footerend />
     </div>
   );
 }
