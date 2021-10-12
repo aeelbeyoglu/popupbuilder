@@ -4,6 +4,8 @@ import { getPostBySlug, getAllPosts } from "../lib/api";
 import Head from "next/head";
 import markdownToHtml from "../lib/markdownToHtml";
 import BlogContent from "../components/BlogContent";
+import Navbar from "../components/Navbar";
+import Link from "next/link";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -12,6 +14,7 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <div>
+      <Navbar />
   <BlogContent post={post}> </BlogContent>
     </div>
   

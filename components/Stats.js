@@ -19,16 +19,16 @@ export default function Example() {
               <div className="max-w-4xl mx-auto">
                 <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
                   <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Pepperoni</dt>
-                    <dd className="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Popup Builders</dt>
+                    <dd className="order-1 text-5xl font-extrabold text-blue-600">12</dd>
                   </div>
                   <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Delivery</dt>
-                    <dd className="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Inspirational Designs</dt>
+                    <dd className="order-1 text-5xl font-extrabold text-blue-600">+100</dd>
                   </div>
                   <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Calories</dt>
-                    <dd className="order-1 text-5xl font-extrabold text-indigo-600">100k</dd>
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Hours Comparison Data</dt>
+                    <dd className="order-1 text-5xl font-extrabold text-blue-600">+50</dd>
                   </div>
                 </dl>
               </div>

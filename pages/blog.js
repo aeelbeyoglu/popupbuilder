@@ -21,17 +21,12 @@ export default function Home({ allPosts }) {
 
   return (
     <div>
-      <Seo title="Popup Builder" description="popupsmart" />
+      <Seo title="Blo" description="popupsmart" />
       <Navbar />
-      <Hero setOpen={setOpen}/>
-      <InspirationalPopups />
-      <LogoTools />
+     
       <Bloglist posts={allPosts} />
-      <Faq />
-      <Stats />
+      
       <Footer />
-      <Banner />
-      <Modal open={open} setOpen={setOpen}/>
     </div>
   );
 }

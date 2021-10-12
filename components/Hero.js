@@ -26,9 +26,9 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 
-export default function Example() {
+export default function Example({setOpen}) {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div className="bg-white">
       <div className="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
         <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
@@ -50,7 +50,7 @@ export default function Example() {
               </p>
             </div>
             <div className="mt-12 justify-items-center sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <Image className="w-full" src="/assets/img/hero.png" alt="" width="350" height="350"/>
+            <Image onClick={()=>setOpen(true)} className="w-full" src="/assets/img/hero.svg" alt="" width="650" height="450"/>
             </div>
           </div>
         </main>

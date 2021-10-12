@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
     /* This example requires Tailwind CSS v2.0+ */
     import { CheckIcon } from '@heroicons/react/outline'
@@ -554,7 +556,7 @@ export default function Example() {
 
 
 
-
+    <Footer />
 
 
 
