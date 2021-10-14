@@ -37,43 +37,46 @@ const faqs = [
 const pricing = {
   tiers: [
     {
-      title: "Basic",
-      price: 29,
+      title: "Freelancer",
+      price: 24,
       frequency: "/month",
-      description: "",
+      description: "The essentials to provide your best work for clients.",
       features: [
-        "Unlimited Popups",
-        "Unlimited Websites",
-        "100.000 Pageviews",
-        "Email Support",
+        "5 products",
+        "Up to 1,000 subscribers",
+        "Basic analytics",
+        "48-hour support response time",
       ],
       cta: "Monthly billing",
       mostPopular: false,
     },
     {
-      title: "Professional",
-      price: 79,
+      title: "Startup",
+      price: 32,
       frequency: "/month",
-      description: "",
+      description: "A plan that scales with your rapidly growing business.",
       features: [
-        "Unlimited Popups",
-        "Unlimited Websites",
-        "500.000 Pageviews",
-        "Email & Zoom Support",
+        "25 products",
+        "Up to 10,000 subscribers",
+        "Advanced analytics",
+        "24-hour support response time",
+        "Marketing automations",
       ],
       cta: "Monthly billing",
       mostPopular: true,
     },
     {
-      title: "Expert",
-      price: 129,
+      title: "Enterprise",
+      price: 48,
       frequency: "/month",
-      description: "",
+      description: "Dedicated support and infrastructure for your company.",
       features: [
-        "Unlimited Popups",
-        "Unlimited Websites",
-        "1.000.000 Pageviews",
-        "Email & Zoom Support",
+        "Unlimited products",
+        "Unlimited subscribers",
+        "Advanced analytics",
+        "1-hour, dedicated support response time",
+        "Marketing automations",
+        "Custom integrations",
       ],
       cta: "Monthly billing",
       mostPopular: false,
@@ -174,10 +177,34 @@ export default function Example({ posts }) {
                     Popupsmart
                   </h1>
                   <p className="mt-6 text-xl text-gray-500">
-                  A no-code tool to increase e-commerce sales, build email lists, and engage with your visitors in just 5 minutes. 
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                    qui lorem cupidatat commodo.
                   </p>
                 </div>
-              
+                <form
+                  action="#"
+                  className="mt-12 sm:max-w-lg sm:w-full sm:flex"
+                >
+                  <div className="min-w-0 flex-1">
+                    <label htmlFor="hero-email" className="sr-only">
+                      Email address
+                    </label>
+                    <input
+                      id="hero-email"
+                      type="email"
+                      className="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div className="mt-4 sm:mt-0 sm:ml-3">
+                    <button
+                      type="submit"
+                      className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-600 text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
+                    >
+                      Notify me
+                    </button>
+                  </div>
+                </form>
                 <div className="mt-6">
                   <div className="inline-flex items-center divide-x divide-gray-300">
                     <div className="flex-shrink-0 flex pr-5">
@@ -257,8 +284,8 @@ export default function Example({ posts }) {
               <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
                 <img
                   className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
-                  src="assets/img/popupsmart-website.jpg"
-                  alt="Popupsmart Official Website"
+                  src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
+                  alt=""
                 />
               </div>
             </div>

@@ -10,14 +10,12 @@ export default function Example() {
               Popup Builder Tool Reviews
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              egestas tempus tellus etiam sed. Quam a scelerisque amet
-              ullamcorper eu enim et fermentum, augue.
+            Check out our evaluation content, which is the result of hours of work.
             </p>
             <div className="mt-8 sm:flex">
               <div className="rounded-md shadow">
                 <Link href="/popup-builder-tools/">
-                  <a className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                  <a className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
                     Explore Popup Builders
                   </a>
                 </Link>
@@ -28,43 +26,43 @@ export default function Example() {
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                alt="Workcation"
+                src="assets/img/sleeknote.svg"
+                alt="Sleeknote"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center py-8 px-16 bg-gray-50">
+              <img
+                className="max-h-12"
+                src="assets/img/optimonk.svg"
+                alt="Optimonk"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center py-8 px-16 bg-gray-50">
+              <img
+                className="max-h-12"
+                src="assets/img/wisepops.svg"
+                alt="Wisepops"
               />
             </div>
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                alt="Mirage"
+                src="assets/img/popupsmart.svg"
+                alt="Popupsmart"
               />
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+            <div className="col-span-1 flex justify-center py-8 px-16 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                alt="Tuple"
+                src="assets/img/sumo.png"
+                alt="Sumo"
               />
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+            <div className="col-span-1 flex justify-center py-8 px-16 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
-                alt="Laravel"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-                alt="Statamic"
+                src="assets/img/optinmonster.png"
+                alt="Optinmonster"
               />
             </div>
           </div>

@@ -31,7 +31,7 @@ export default function Home({ allPosts }) {
       <Stats />
       <Footer />
       <Banner />
-      <Modal open={open} setOpen={setOpen}/>
+     {/* <Modal open={open} setOpen={setOpen}/> */}
     </div>
   );
 }
