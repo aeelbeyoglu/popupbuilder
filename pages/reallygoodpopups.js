@@ -95,24 +95,12 @@ const filters = [
     ],
   },
   {
-    id: 'color',
-    name: 'Color',
-    options: [
-      { value: 'white', label: 'White', checked: false },
-      { value: 'beige', label: 'Beige', checked: false },
-      { value: 'blue', label: 'Blue', checked: false },
-      { value: 'brown', label: 'Brown', checked: false },
-      { value: 'green', label: 'Green', checked: false },
-      { value: 'purple', label: 'Purple', checked: false },
-    ],
-  },
-  {
     id: 'sizes',
-    name: 'Sizes',
+    name: 'Product',
     options: [
-      { value: 'xs', label: 'XS', checked: false },
-      { value: 's', label: 'S', checked: false },
-      { value: 'm', label: 'M', checked: false },
+      { value: 'xs', label: 'Popupsmart', checked: false },
+      { value: 's', label: 'Sleeknote', checked: false },
+      { value: 'm', label: 'Optimonk', checked: false },
       { value: 'l', label: 'L', checked: false },
       { value: 'xl', label: 'XL', checked: false },
       { value: '2xl', label: '2XL', checked: false },
@@ -259,7 +247,7 @@ export default function Example() {
         <main>
           <div className="bg-white">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">Newsletter Popups</h1>
+              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">#ReallyGoodPopupDesigns</h1>
               <p className="mt-4 max-w-xl text-sm text-gray-700">
                 Our thoughtfully designed workspace objects are crafted in limited runs. Improve your productivity and
                 organization with these sale items before we run out.
