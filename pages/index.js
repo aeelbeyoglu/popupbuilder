@@ -6,7 +6,7 @@ import Bloglist from "../components/Bloglist";
 import Stats from "../components/Stats";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
-import { getAllPosts } from "../lib/api";
+import { getAllPosts } from "../lib/BlogApi";
 import Seo from "../components/Seo";
 import Navbar from "../components/Navbar";
 import LogoTools from "../components/LogoTools";

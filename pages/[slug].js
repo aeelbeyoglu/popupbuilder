@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import { getPostBySlug, getAllPosts } from "../lib/api";
+import { getPostBySlug, getAllPosts } from "../lib/BlogApi";
 import Head from "next/head";
 import markdownToHtml from "../lib/markdownToHtml";
 import BlogContent from "../components/BlogContent";
@@ -15,9 +15,8 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <div>
       <Navbar />
-  <BlogContent post={post}> </BlogContent>
+      <BlogContent post={post}> </BlogContent>
     </div>
-  
   );
 }
 

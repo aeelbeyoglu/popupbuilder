@@ -14,41 +14,41 @@
   }
   ```
 */
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import Link from 'next/link'
+import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 
 const navigation = {
   solutions: [
-    { name: 'Blog', href: '/blog/' },
-    { name: 'About', href: '/' },
-    { name: 'Contact', href: '#' },
-    { name: 'Terms of Use', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
+    { name: "Blog", href: "/blog/" },
+    { name: "About", href: "/" },
+    { name: "Contact", href: "#" },
+    { name: "Terms of Use", href: "#" },
+    { name: "Privacy Policy", href: "#" },
   ],
   support: [
-    { name: 'Popupsmart', href: '/popupsmart/' },
-    { name: 'Optinmonster', href: '#' },
-    { name: 'Sleeknote', href: '#' },
-    { name: 'Optimonk', href: '#' },
+    { name: "Popupsmart", href: "/popupsmart/" },
+    { name: "Optinmonster", href: "#" },
+    { name: "Sleeknote", href: "#" },
+    { name: "Optimonk", href: "#" },
   ],
   company: [
-    { name: 'Grow Email List', href: '#' },
-    { name: 'Increase Sales', href: '#' },
-    { name: 'Get More Phone Calls', href: '#' },
-    { name: 'Make Annoncement', href: '#' },
-    { name: 'Collect Form Submission', href: '#' },
+    { name: "Grow Email List", href: "#" },
+    { name: "Increase Sales", href: "#" },
+    { name: "Get More Phone Calls", href: "#" },
+    { name: "Make Annoncement", href: "#" },
+    { name: "Collect Form Submission", href: "#" },
   ],
   legal: [
-    { name: 'Popupsmart vs Sleeknote', href: '/popupsmart-vs-sleeknote/' },
-    { name: 'Sleeknote vs Optinmonster', href: '#' },
-    { name: 'Getsitecontrol vs Wisepops', href: '#' },
-    { name: 'Sumo vs Optinmonster', href: '#' },
-    { name: 'Privy vs Optimonk', href: '#' },
+    { name: "Popupsmart vs Sleeknote", href: "/popupsmart-vs-sleeknote/" },
+    { name: "Sleeknote vs Optinmonster", href: "#" },
+    { name: "Getsitecontrol vs Wisepops", href: "#" },
+    { name: "Sumo vs Optinmonster", href: "#" },
+    { name: "Privy vs Optimonk", href: "#" },
   ],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
+      name: "Facebook",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -60,8 +60,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Instagram',
-      href: '#',
+      name: "Instagram",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -73,8 +73,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Twitter',
-      href: '#',
+      name: "Twitter",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -82,8 +82,8 @@ const navigation = {
       ),
     },
     {
-      name: 'GitHub',
-      href: '#',
+      name: "GitHub",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -95,8 +95,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Dribbble',
-      href: '#',
+      name: "Dribbble",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -108,7 +108,7 @@ const navigation = {
       ),
     },
   ],
-}
+};
 
 export default function Example() {
   return (
@@ -121,28 +121,32 @@ export default function Example() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Popupbuilder.io</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Popupbuilder.io
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href}>
-                      <a className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Popup Builders</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Popup Builders
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href}>
-                      <a className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}
@@ -151,28 +155,32 @@ export default function Example() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Inspire</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Inspire
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href}>
-                      <a className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Compare</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Compare
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <Link href={item.href}> 
-                      <a className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                      <Link href={item.href}>
+                        <a className="text-base text-gray-500 hover:text-gray-900">
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}
@@ -181,7 +189,9 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-12 xl:mt-0">
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Language</h3>
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+              Language
+            </h3>
             <form className="mt-4 sm:max-w-xs">
               <fieldset className="w-full">
                 <label htmlFor="language" className="sr-only">
@@ -200,11 +210,13 @@ export default function Example() {
                     <option>Spanish</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                    <ChevronDownIcon className="h-4 w-4 text-gray-400" aria-hidden="true" />
+                    <ChevronDownIcon
+                      className="h-4 w-4 text-gray-400"
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
               </fieldset>
-              
             </form>
           </div>
         </div>
@@ -214,7 +226,8 @@ export default function Example() {
               Subscribe to our newsletter
             </h3>
             <p className="mt-2 text-base text-gray-500">
-              The latest news, articles, and resources, sent to your inbox weekly.
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
             </p>
           </div>
           <form className="mt-4 sm:flex sm:max-w-md lg:mt-0">
@@ -243,7 +256,11 @@ export default function Example() {
         <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-400 hover:text-gray-500"
+              >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
@@ -255,5 +272,5 @@ export default function Example() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

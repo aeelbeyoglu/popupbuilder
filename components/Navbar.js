@@ -1,14 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
+import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/solid";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import Link from "next/link";
+import ActiveLink from "./ActiveLink";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-gray-50 shadow">
       {({ open }) => (
@@ -19,48 +21,51 @@ export default function Example() {
                 <div className="flex-shrink-0 flex items-center">
                   <Link href="/">
                     <a>
-                  <img
-                    className="block lg:hidden h-10 w-auto"
-                    src="assets/p.svg"
-                    alt="popup builder"
-                  />
-                  </a>
+                      <img
+                        className="block lg:hidden h-10 w-auto"
+                        src="/assets/p.svg"
+                        alt="popup builder"
+                      />
+                    </a>
                   </Link>
 
                   <Link href="/">
                     <a>
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="assets/p.svg"
-                    alt="popup builder"
-                  />
-                  </a>
+                      <img
+                        className="hidden lg:block h-8 w-auto"
+                        src="/assets/p.svg"
+                        alt="popup builder"
+                      />
+                    </a>
                   </Link>
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
-                  {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <Link href="/">
-                    <a className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                      About
-                    </a>
-                  </Link>
+                  <ActiveLink
+                    href="/"
+                    className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    About
+                  </ActiveLink>
 
-                  <Link href="/reallygoodpopups">
-                    <a className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                      #ReallyGoodPopups
-                    </a>
-                  </Link>
+                  <ActiveLink
+                    href="/reallygoodpopups"
+                    className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    #ReallyGoodPopups
+                  </ActiveLink>
 
-                  <Link href="/popup-builder-tools/">
-                    <a className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                      Reviews
-                    </a>
-                  </Link>
-                  <Link href="/compare">
-                    <a className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                      Compare
-                    </a>
-                  </Link>
+                  <ActiveLink
+                    href="/popup-builder-tools"
+                    className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    Reviews
+                  </ActiveLink>
+                  <ActiveLink
+                    href="/compare"
+                    className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    Compare
+                  </ActiveLink>
                 </div>
               </div>
               <div className="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">

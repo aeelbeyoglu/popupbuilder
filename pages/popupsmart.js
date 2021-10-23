@@ -174,10 +174,11 @@ export default function Example({ posts }) {
                     Popupsmart
                   </h1>
                   <p className="mt-6 text-xl text-gray-500">
-                  A no-code tool to increase e-commerce sales, build email lists, and engage with your visitors in just 5 minutes. 
+                    A no-code tool to increase e-commerce sales, build email
+                    lists, and engage with your visitors in just 5 minutes.
                   </p>
                 </div>
-              
+
                 <div className="mt-6">
                   <div className="inline-flex items-center divide-x divide-gray-300">
                     <div className="flex-shrink-0 flex pr-5">
