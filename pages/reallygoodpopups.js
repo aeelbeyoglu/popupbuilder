@@ -9,6 +9,7 @@ import PopupGrid from "../components/Popups/PopupsGrid";
 import { getAllPopups } from "../lib/PopupApi";
 
 export default function ReallyGoodPopups({ allPopups }) {
+  const [filteredAllPopups, setFilteredAllPopups] = useState(allPopups);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState([
     {
@@ -16,7 +17,7 @@ export default function ReallyGoodPopups({ allPopups }) {
       label: "Objects",
     },
   ]);
-
+  const [numbers, setNumbers] = useState({ 0: 3, 1: 3 });
   const [filters, setFilters] = useState([
     {
       id: "category",
@@ -24,25 +25,39 @@ export default function ReallyGoodPopups({ allPopups }) {
       options: [
         { value: 1, label: "Grow Email List", checked: true },
         { value: 2, label: "Increase Sales", checked: true },
-        { value: 3, label: "Get More Phone Calls", checked: false },
+        { value: 3, label: "Get More Phone Calls", checked: true },
       ],
     },
     {
       id: "product",
       name: "Product",
       options: [
-        { value: 1, label: "Popupsmart", checked: false },
-        { value: 2, label: "Sleeknote", checked: false },
-        { value: 3, label: "Optimonk", checked: false },
+        { value: 1, label: "Popupsmart", checked: true },
+        { value: 2, label: "Sleeknote", checked: true },
+        { value: 3, label: "Optimonk", checked: true },
       ],
     },
   ]);
 
-  const checkboxOnChange = (e) => {
-    const a = filters[0].options[1].checked = true;
-    console.log(a)
-    // setFilters(a);
-    console.log(e);
+  const checkboxOnChange = (e, sectionIdx, optionIdx) => {
+    const a = (filters[sectionIdx].options[optionIdx].checked = e);
+    setFilters(filters);
+    const length = filters[sectionIdx].options.filter(function (s) {
+      return s.checked;
+    }).length;
+    setNumbers((prev) => ({ ...prev, [sectionIdx]: length }));
+    console.log(allPopups);
+
+    // category filter
+    const ffc = filters.map((f) => {
+      return f.options.filter((o) => o.checked);
+    });
+    console.log(ffc, "**");
+    const asd = ffc[0].map((x) => {
+      return allPopups.filter((e) => e.category === x.value).shift();
+    });
+    console.log(asd, 'aasd');
+    setFilteredAllPopups(asd);
   };
 
   return (
@@ -194,11 +209,7 @@ export default function ReallyGoodPopups({ allPopups }) {
                           <Popover.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                             <span>{section.name}</span>
                             <span className="ml-1.5 rounded py-0.5 px-1.5 bg-gray-200 text-xs font-semibold text-gray-700 tabular-nums">
-                              {
-                                section.options.filter(function (s) {
-                                  return s.checked;
-                                }).length
-                              }
+                              {numbers[sectionIdx]}
                             </span>
                             <ChevronDownIcon
                               className="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500"
@@ -224,17 +235,23 @@ export default function ReallyGoodPopups({ allPopups }) {
                                   >
                                     <input
                                       id={`filter-${section.id}-${optionIdx}`}
-                                      name={`${section.id}[]`}
-                                      checked={option.checked}
+                                      name={`filter-${section.id}-${optionIdx}`}
+                                      defaultChecked={option.checked}
                                       type="checkbox"
-                                      onChange={(e) => checkboxOnChange(e)}
+                                      onChange={(e) =>
+                                        checkboxOnChange(
+                                          e.target.checked,
+                                          sectionIdx,
+                                          optionIdx
+                                        )
+                                      }
                                       className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                                     />
                                     <label
                                       htmlFor={`filter-${section.id}-${optionIdx}`}
                                       className="ml-3 pr-6 text-sm font-medium text-gray-900 whitespace-nowrap"
                                     >
-                                      {option.label} - 2
+                                      {option.label}
                                     </label>
                                   </div>
                                 ))}
@@ -269,7 +286,7 @@ export default function ReallyGoodPopups({ allPopups }) {
                         key={activeFilter.value}
                         className="m-1 inline-flex rounded-full border border-gray-200 items-center py-1.5 pl-3 pr-2 text-sm font-medium bg-white text-gray-900"
                       >
-                        <span>{activeFilter.label}</span>
+                        <span>{activeFilter.label} - 2</span>
                         <button
                           type="button"
                           className="flex-shrink-0 ml-1 h-4 w-4 p-1 rounded-full inline-flex text-gray-400 hover:bg-gray-200 hover:text-gray-500"
@@ -297,7 +314,7 @@ export default function ReallyGoodPopups({ allPopups }) {
               </div>
             </div>
           </section>
-          <PopupGrid popups={allPopups} />
+          <PopupGrid popups={filteredAllPopups} />
         </main>
       </div>
       <Footer />
