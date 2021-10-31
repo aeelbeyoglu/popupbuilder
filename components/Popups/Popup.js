@@ -3,7 +3,7 @@ import Script from "next/script";
 import Image from "next/image";
 import { XCircleIcon } from "@heroicons/react/outline";
 
-export default function Popup({ popup }) {
+export default function Popup({ popup, filters }) {
   const [show, setShow] = useState(false);
   const setShowFunc = (e) => {
     setShow(e);
@@ -58,15 +58,29 @@ export default function Popup({ popup }) {
                     className="rounded-lg"
                   />
                 </div>
-                <div className="relative mt-12 aspect-w-16 aspect-h-9">
-                  <iframe
-                    src="https://player.vimeo.com/video/500518235?h=2dc8dd139e&byline=0"
-                    className="absolute top-0 left-0 w-full h-full"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+                {popup.popupImage2 && (
+                  <div className="relative bg-gray-200 rounded-lg aspect-w-16 aspect-h-9 mt-4">
+                    <Image
+                      src={popup.popupImage2}
+                      alt={popup.popupImage2Alt}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-lg"
+                    />
+                  </div>
+                )}
+
+                {popup.videoId && (
+                  <div className="relative mt-12 aspect-w-16 aspect-h-9">
+                    <iframe
+                      src={`https://player.vimeo.com/video/${popup.videoId}?h=2dc8dd139e&byline=0`}
+                      className="absolute top-0 left-0 w-full h-full"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
               </div>
               <div className="w-1/3">
                 <div className="pl-12">
@@ -74,6 +88,11 @@ export default function Popup({ popup }) {
                   <p className="mt-1 text-md text-gray-600">
                     {popup.description}
                   </p>
+                  {filters[1].options
+                    .filter((i) => i.value === popup.product)
+                    .map((e) => (
+                      <p className="mt-4">Product: {e.label}</p>
+                    ))}
                 </div>
               </div>
             </div>

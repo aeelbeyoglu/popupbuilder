@@ -30,12 +30,14 @@ export async function getStaticProps() {
       category: product.get("Categories"),
       images: product.get("Image").map((e)=>e.url),
       id: product.id,
+      published: product.get("Published")||false,
     };
   });
   console.log(products);
   return {
     props: {
       nocodetools: products,
+      revalidate: 100,
     }, // will be passed to the page component as props
   };
 }
