@@ -88,7 +88,7 @@ export default function Popup({ popup, filters }) {
                   <p className="mt-1 text-md text-gray-600">
                     {popup.description}
                   </p>
-                  {filters[1].options
+                  {filters && filters[1].options
                     .filter((i) => i.value === popup.product)
                     .map((e) => (
                       <p className="mt-4">Product: {e.label}</p>

@@ -16,8 +16,8 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex px-2 lg:px-0">
+            <div className="flex w-full justify-between h-16">
+              <div className="w-full grid grid-cols-12 px-2 lg:px-0">
                 <div className="flex-shrink-0 flex items-center">
                   <Link href="/">
                     <a>
@@ -39,7 +39,7 @@ export default function Navbar() {
                     </a>
                   </Link>
                 </div>
-                <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
+                <div className="hidden col-span-10 justify-center lg:ml-6 lg:flex lg:space-x-8">
                   <ActiveLink
                     href="/"
                     className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
@@ -69,26 +69,7 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">
-                <div className="max-w-lg w-full lg:max-w-xs">
-                  <label htmlFor="search" className="sr-only">
-                    Search
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <SearchIcon
-                        className="h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <input
-                      id="search"
-                      name="search"
-                      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      placeholder="Search"
-                      type="search"
-                    />
-                  </div>
-                </div>
+              
               </div>
               <div className="flex items-center lg:hidden">
                 {/* Mobile menu button */}
@@ -102,24 +83,13 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="hidden lg:ml-4 lg:flex lg:items-center">
-                <button
-                  type="button"
-                  className="flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-
+                
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-4 relative flex-shrink-0">
                   <div>
                     <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="assets/english.svg"
-                        alt=""
-                      />
+                      
                     </Menu.Button>
                   </div>
                   <Transition
